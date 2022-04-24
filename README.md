@@ -20,6 +20,6 @@ samples, guidance on mobile development, and a full API reference.
 # Attendance
 
 
-1- abdalla
-2- sajeda
-3- mustafa
+- abdalla
+-  sajeda
+-  mustafa
