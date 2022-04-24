@@ -8,13 +8,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<String> categories = [
-    "Pizzas",
-    "Burger",
-    "Sandwich",
-    "Desayuno",
-    "Brocheta"
-  ];
+  List<String> categories = ["Pizzas", "Burger", "Sandwich", "Desayuno", "Brocheta"];
 
   String selectedCategory = "";
 
@@ -67,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
           SizedBox(
-            height: 100,
+            height: 110,
             child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: categories.length,
@@ -85,37 +79,25 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: const BorderRadius.all(
                               Radius.circular(10),
                             ),
-                            color: selectedCategory == categories[index]
-                                ? const Color(0xff572D86)
-                                : Colors.white,
+                            color: selectedCategory == categories[index] ? const Color(0xff572D86) : Colors.white,
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.grey.withOpacity(0.5),
                                 spreadRadius: 2,
                                 blurRadius: 10,
-                                offset: const Offset(
-                                    0, 1), // changes position of shadow
+                                offset: const Offset(0, 1), // changes position of shadow
                               ),
                             ],
                           ),
-                          width: 70,
-                          height: 85,
+                          width: 90,
+                          height: 87,
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Column(
                               children: [
-                                Image.asset(
-                                    "assets/categories/${categories[index]}.png"),
+                                Image.asset("assets/categories/${categories[index]}.png"),
                                 Expanded(child: Container()),
-                                Text(
-                                  categories[index],
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      color:
-                                          selectedCategory == categories[index]
-                                              ? Colors.white
-                                              : const Color(0xff0D1863)),
-                                )
+                                Text(categories[index], style: TextStyle(fontSize: 12, color: selectedCategory == categories[index] ? Colors.white : const Color(0xff0D1863)), maxLines: 2)
                               ],
                             ),
                           ),
@@ -149,8 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Colors.grey,
               ),
             ),
-            style: const TextStyle(
-                fontSize: 10.0, height: 4, color: Colors.black54)),
+            style: const TextStyle(fontSize: 10.0, height: 4, color: Colors.black54)),
       ),
     );
   }
@@ -175,10 +156,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Text(
                   "Amman",
-                  style: TextStyle(
-                      color: Color(0xff341557),
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold),
+                  style: TextStyle(color: Color(0xff341557), fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
