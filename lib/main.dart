@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:talabat_ordering_system/home/home_screen.dart';
+import 'package:talabat_ordering_system/screens/home/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
