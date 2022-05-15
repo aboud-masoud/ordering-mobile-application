@@ -1,3 +1,5 @@
+import 'package:talabat_ordering_system/models/item_model.dart';
+
 class MainModel {
   String name;
   String imgName;
@@ -5,28 +7,5 @@ class MainModel {
   bool isSelected;
   List<Item> items;
 
-  MainModel(
-      {required this.name,
-      required this.imgName,
-      required this.badgeCount,
-      this.items = const [],
-      this.isSelected = false});
-}
-
-class Item {
-  String name;
-  String desc;
-  String imgPath;
-  double price;
-  double discount;
-  int qty;
-
-  Item({
-    required this.name,
-    required this.desc,
-    required this.imgPath,
-    required this.price,
-    required this.discount,
-    this.qty = 0,
-  });
+  MainModel({required this.name, required this.imgName, required this.badgeCount, this.items = const [], this.isSelected = false});
 }

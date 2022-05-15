@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:talabat_ordering_system/models/main_model.dart';
+import 'package:talabat_ordering_system/models/item_model.dart';
 
 Future showOurCartModal(BuildContext context, List<Item> list) async {
   return showModalBottomSheet(
@@ -34,10 +34,7 @@ Future showOurCartModal(BuildContext context, List<Item> list) async {
                   Expanded(child: Container()),
                   const Text(
                     "Cart",
-                    style: TextStyle(
-                        color: Color(0xff572D86),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
+                    style: TextStyle(color: Color(0xff572D86), fontWeight: FontWeight.bold, fontSize: 20),
                   ),
                   Expanded(child: Container()),
                   const SizedBox(
@@ -67,15 +64,11 @@ Future showOurCartModal(BuildContext context, List<Item> list) async {
                                 ),
                                 Text(
                                   list[index].name,
-                                  style: const TextStyle(
-                                      color: Color(0xff341557), fontSize: 20),
+                                  style: const TextStyle(color: Color(0xff341557), fontSize: 20),
                                 ),
                                 Text(
                                   list[index].price.toString(),
-                                  style: const TextStyle(
-                                      color: Color(0xff341557),
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold),
+                                  style: const TextStyle(color: Color(0xff341557), fontSize: 18, fontWeight: FontWeight.bold),
                                 ),
                               ],
                             ),
@@ -102,10 +95,7 @@ Future showOurCartModal(BuildContext context, List<Item> list) async {
                                   ),
                                   Text(
                                     list[index].qty.toString(),
-                                    style: const TextStyle(
-                                        color: Color(0xff341557),
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.bold),
+                                    style: const TextStyle(color: Color(0xff341557), fontSize: 10, fontWeight: FontWeight.bold),
                                   ),
                                   IconButton(
                                     onPressed: () {
